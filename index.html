@@ -61,6 +61,31 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css?v=1">
 
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _vc = localStorage.getItem('vettica-consent');
+      if (_vc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKC8Z6JZW0"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-GKC8Z6JZW0');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
@@ -513,7 +538,28 @@
                     <p class="cta-section__text">Tell us what you're looking for. We'll build a verified list matched to your target veterinary market.</p>
                 </div>
                 
-                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <form class="form" action="https://formspree.io/f/xkokqknn" method="POST">
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label class="form__label" for="cta-name">Name</label>
+                            <input class="form__input" type="text" id="cta-name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="cta-email">Email</label>
+                            <input class="form__input" type="email" id="cta-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="cta-company">Company</label>
+                        <input class="form__input" type="text" id="cta-company" name="company">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="cta-message">What data do you need?</label>
+                        <textarea class="form__textarea" id="cta-message" name="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--white btn--lg form__submit">Get 20 Free Records</button>
+                </form>
                 <p class="cta-section__proof">State board verified. 3-5 day delivery. No annual contracts.</p>
             </div>
         </section>

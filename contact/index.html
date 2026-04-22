@@ -57,6 +57,31 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css?v=1">
 
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _vc = localStorage.getItem('vettica-consent');
+      if (_vc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKC8Z6JZW0"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-GKC8Z6JZW0');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
@@ -199,7 +224,7 @@
 
         <section class="section">
             <div class="container container--narrow">
-                <form class="form" action="#" method="POST">
+                <form class="form" action="https://formspree.io/f/xkokqknn" method="POST">
                     <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form__row">
                         <div class="form__group">
