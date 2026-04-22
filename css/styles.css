@@ -884,6 +884,57 @@ strong { font-weight: 600; }
     color: var(--text-secondary);
 }
 
+/* Pricing Section Header */
+.pricing-section__header {
+    margin-bottom: var(--space-8);
+}
+.pricing-section__header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+}
+.pricing-section__header p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    max-width: 640px;
+    line-height: 1.7;
+}
+.pricing-section__header p a {
+    color: var(--emerald-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+/* Pricing Callout */
+.pricing-callout {
+    background: var(--gray-50);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-5) var(--space-6);
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.pricing-callout p { margin-bottom: var(--space-2); }
+.pricing-callout p:last-child { margin-bottom: 0; }
+.pricing-callout a {
+    color: var(--emerald-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Alt background section */
+.bg-light { background: var(--bg-secondary); }
+
 /* Pricing Page Cards */
 .pricing-cards {
     display: grid;
@@ -942,6 +993,11 @@ strong { font-weight: 600; }
     font-size: var(--font-size-base);
     font-weight: 400;
     color: var(--text-muted);
+}
+.pricing-card__period {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-6);
 }
 .pricing-card__unit {
     font-size: var(--font-size-sm);
@@ -1563,6 +1619,7 @@ strong { font-weight: 600; }
     .solution-grid { grid-template-columns: 1fr 1fr; }
     .process-grid { grid-template-columns: 1fr 1fr; }
     .pricing-cards { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 768px) {
